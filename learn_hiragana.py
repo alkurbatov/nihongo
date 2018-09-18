@@ -13,8 +13,14 @@ row_ra = [('ра', 'ら'), ('ри', 'り'), ('ру', 'る'), ('рэ', 'れ'), ('
 row_va = [('ва', 'わ'), ('во', 'を')]
 row_n  = [('н', 'ん')]
 
+row_ka_dakuten = [('га', 'が'), ('ги', 'ぎ'), ('гу', 'ぐ'), ('гэ', 'げ'), ('го', 'ご')]
+row_sa_dakuten = [('дза', 'ざ'), ('дзи', 'じ'), ('дзу', 'ず'), ('дзэ', 'ぜ'), ('дзо', 'ぞ')]
+row_ta_dakuten = [('да', 'だ'), ('дзи', 'ぢ'), ('ду', 'づ'), ('дэ', 'で'), ('до', 'ど')]
+row_ha_dakuten = [('ба', 'ば'), ('би', 'び'), ('бу', 'ぶ'), ('бэ', 'べ'), ('бо', 'ぼ')]
+
 kana = row_a + row_ka + row_ta + row_sa + row_na + row_ha + row_ma + \
-       row_ya + row_ra + row_va + row_n
+       row_ya + row_ra + row_va + row_n + \
+       row_ka_dakuten + row_sa_dakuten + row_ta_dakuten + row_ha_dakuten
 
 
 def learn():
