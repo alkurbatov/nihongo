@@ -1,4 +1,4 @@
-import random
+import core
 
 
 row_a = [
@@ -75,21 +75,5 @@ kana = row_a + row_ka + row_sa + row_ta + row_na + row_ha + row_ma + \
        row_ya + row_ra + row_wa + row_n
 
 
-def learn():
-    try:
-        while kana:
-            syllable = random.choice(kana)
-            kana.remove(syllable)
-
-            print(syllable[0])
-            input()
-
-            print(syllable[1])
-            input()
-
-    except KeyboardInterrupt:
-        pass
-
-
 if __name__ == '__main__':
-    learn()
+    core.learn(kana)
