@@ -1,6 +1,16 @@
 import random
 
 
+def read_words(filepath):
+    words = []
+
+    with open(filepath) as f:
+        for i in f.readlines():
+            words.append(i.strip().split('|'))
+
+    return words
+
+
 def learn(data):
     try:
         while data:
