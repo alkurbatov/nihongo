@@ -6,6 +6,9 @@ def read_words(filepath):
 
     with open(filepath) as f:
         for i in f.readlines():
+            if i.startswith('#'):
+                continue
+
             words.append(i.strip().split('|'))
 
     return words
