@@ -24,7 +24,6 @@ def learn(data):
             input()
 
             print(pair[1])
-            input()
 
     except KeyboardInterrupt:
         pass
