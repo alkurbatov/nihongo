@@ -20,6 +20,10 @@ def learn(data):
             pair = random.choice(data)
             data.remove(pair)
 
+            if len(pair) < 2:
+                print('Unexpected format: {}'.format(pair))
+                return
+
             print(pair[0])
             input()
 
