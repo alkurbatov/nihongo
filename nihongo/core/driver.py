@@ -23,7 +23,7 @@ def learn(data):
             print(pair[0])
             input()
 
-            print(pair[1])
+            print('{}\n'.format(pair[1]))
 
     except KeyboardInterrupt:
         pass
