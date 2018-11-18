@@ -1,7 +1,7 @@
 import random
 
 
-def read_words(filepath):
+def read_words(filepath, keyword=None):
     words = []
 
     with open(filepath) as f:
@@ -9,7 +9,20 @@ def read_words(filepath):
             if i.startswith('#'):
                 continue
 
-            words.append(i.strip().split('|'))
+            record = i.strip().split('|')
+            if not keyword:
+                words.append(record)
+                continue
+
+            if len(record) > 2:
+                tags = record[2].split(',')
+            else:
+                tags = ()
+
+            if keyword not in tags:
+                continue
+
+            words.append(record)
 
     return words
 
