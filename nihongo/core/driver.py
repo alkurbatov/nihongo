@@ -1,7 +1,7 @@
 import random
 
 
-def read_words(filepath, keyword=None):
+def read_words(filepath, search_tags=None):
     words = []
 
     with open(filepath) as f:
@@ -10,16 +10,16 @@ def read_words(filepath, keyword=None):
                 continue
 
             record = i.strip().split('|')
-            if not keyword:
+            if not search_tags:
                 words.append(record)
                 continue
 
             if len(record) > 2:
-                tags = record[2].split(',')
+                tags = set(record[2].split(','))
             else:
-                tags = ()
+                tags = set()
 
-            if keyword not in tags:
+            if not search_tags & tags:
                 continue
 
             words.append(record)
