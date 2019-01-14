@@ -29,7 +29,11 @@ def read_words(filepath, search_tags=None):
 
 def learn(data):
     try:
+        total = len(data)
+        shown = 0
+
         while data:
+            shown += 1
             pair = random.choice(data)
             data.remove(pair)
 
@@ -37,10 +41,10 @@ def learn(data):
                 print('Unexpected format: {}'.format(pair))
                 return
 
-            print(pair[0])
+            print('({}\{}) {}?'.format(shown, total, pair[0]))
             input()
 
-            print('{}\n'.format(pair[1]))
+            print('{}\n\n'.format(pair[1]))
 
     except KeyboardInterrupt:
         pass
