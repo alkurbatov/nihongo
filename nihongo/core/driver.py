@@ -1,5 +1,13 @@
+import platform
 import random
+import subprocess
 
+
+def clear_screen():
+    if platform.system().lower() == 'windows':
+        return subprocess.call('cls')
+
+    return subprocess.call('clear')
 
 def read_words(filepath, search_tags=None):
     words = []
