@@ -20,6 +20,9 @@ def parse_args(args):
 
         return tags
 
+    if args[0].isdigit():
+        return set([args[0]])
+
     return set()
 
 
